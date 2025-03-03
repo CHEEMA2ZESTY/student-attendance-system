@@ -41,20 +41,22 @@
             </button>
         </div>
 
-        <table class="attendance-table">
-            <thead>
-                <tr>
-                    <th class="sortable" onclick="sortRecords('name')">Name 🔽</th>
-                    <th>Matric/Diploma No.</th>
-                    <th>Date</th>
-                    <th class="sortable" onclick="sortRecords('status')">Status 🔽</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody id="attendance-records">
-                <!-- Records will be inserted dynamically -->
-            </tbody>
-        </table>
+        <div class="table-container">
+            <table class="attendance-table">
+                <thead>
+                    <tr>
+                        <th class="sortable" onclick="sortRecords('name')">Name 🔽</th>
+                        <th>Matric/Diploma No.</th>
+                        <th>Date</th>
+                        <th class="sortable" onclick="sortRecords('status')">Status 🔽</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="attendance-records">
+                    <!-- Records will be inserted dynamically -->
+                </tbody>
+            </table>
+        </div>
     </main>
 
     <div id="notification" class="notification"></div>
@@ -69,5 +71,43 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <style>
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                padding: 10px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                padding: 0;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+
+            .search-sort {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+
+            .table-container {
+                width: 100%;
+                overflow-x: auto;
+            }
+
+            .attendance-table {
+                width: 100%;
+                min-width: 600px;
+            }
+        }
+    </style>
+
 </body>
 </html>

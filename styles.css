@@ -44,6 +44,7 @@ header {
     color: white;
     padding: 15px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
 }
 
 header .logo {
@@ -57,9 +58,17 @@ header .logo img {
     margin-right: 10px;
 }
 
+/* LASU Logo */
+header .lasu-logo {
+    width: 60px;
+    height: auto;
+    margin-right: 15px;
+}
+
 nav ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -158,9 +167,16 @@ nav ul li a.active {
 }
 
 /* Attendance Table */
+.attendance-table-container {
+    width: 100%;
+    overflow-x: auto;
+    padding: 10px;
+}
+
 .attendance-table {
     width: 100%;
     max-width: 800px;
+    min-width: 600px;
     margin: 20px auto;
     border-collapse: collapse;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -274,9 +290,27 @@ footer .social-links a:hover {
         margin: 8px 0;
     }
 
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lasu-logo {
+        width: 50px;
+        margin-bottom: 10px;
+    }
+
+    .attendance-table-container {
+        overflow-x: auto;
+    }
+
     .attendance-table {
         width: 100%;
-        overflow-x: auto;
     }
 
     .hero h2 {
