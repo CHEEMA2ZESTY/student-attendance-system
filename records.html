@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Records</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+            <h1>Student Attendance System</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="attendance.html">Mark Attendance</a></li>
+                <li><a href="records.html" class="active">Attendance Records</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><button id="theme-toggle" title="Toggle Dark Mode">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Attendance Records</h2>
+
+        <div class="search-sort">
+            <input type="text" id="search" placeholder="🔍 Search student name or matric number..." onkeyup="searchAttendance()">
+            
+            <button onclick="sortRecords('name')">
+                <i class="fa-solid fa-sort-alpha-down"></i> Sort by Name
+            </button>
+            <button onclick="sortRecords('status')">
+                <i class="fa-solid fa-filter"></i> Sort by Status
+            </button>
+        </div>
+
+        <table class="attendance-table">
+            <thead>
+                <tr>
+                    <th class="sortable" onclick="sortRecords('name')">Name 🔽</th>
+                    <th>Matric/Diploma No.</th>
+                    <th>Date</th>
+                    <th class="sortable" onclick="sortRecords('status')">Status 🔽</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="attendance-records">
+                <!-- Records will be inserted dynamically -->
+            </tbody>
+        </table>
+    </main>
+
+    <div id="notification" class="notification"></div>
+
+    <footer>
+        <p>&copy; 2025 Student Attendance System | LASU SIWES IT Project</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61573516934577"><i class="fab fa-facebook"></i></a>
+            <a href="https://wa.me/09043650490"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://x.com/CHEEMA2ZESTY?t=_FiM5jJprTeg1N_bOZPAlw&s=09"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

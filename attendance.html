@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Attendance</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+            <h1>Student Attendance System</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="attendance.html" class="active">Mark Attendance</a></li>
+                <li><a href="records.html">Attendance Records</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><button id="theme-toggle" title="Toggle Dark Mode">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Mark Your Attendance</h2>
+
+        <form id="attendance-form">
+            <label for="student-name"><i class="fa-solid fa-user"></i> Student Name:</label>
+            <input type="text" id="student-name" placeholder="Enter your name" required>
+
+            <label for="matric-number"><i class="fa-solid fa-id-card"></i> Matric/Diploma Number:</label>
+            <input type="text" id="matric-number" placeholder="Enter your matric/diploma number" required>
+
+            <label for="attendance-status"><i class="fa-solid fa-clipboard-check"></i> Status:</label>
+            <select id="attendance-status">
+                <option value="Present">Present</option>
+                <option value="Late">Late</option>
+                <option value="Absent">Absent</option>
+            </select>
+
+            <button type="submit"><i class="fa-solid fa-paper-plane"></i> Submit Attendance</button>
+        </form>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="attendance-progress">0%</div>
+        </div>
+    </main>
+
+    <div id="notification" class="notification"></div>
+
+    <footer>
+        <p>&copy; 2025 Student Attendance System | LASU SIWES IT Project</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61573516934577"><i class="fab fa-facebook"></i></a>
+            <a href="https://wa.me/09043650490"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://x.com/CHEEMA2ZESTY?t=_FiM5jJprTeg1N_bOZPAlw&s=09"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

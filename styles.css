@@ -1,0 +1,289 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #f4f4f4;
+}
+
+body.dark-mode header, 
+body.dark-mode footer {
+    background-color: #242424;
+}
+
+body.dark-mode .cta-buttons .btn {
+    background: #ffdd57;
+    color: black;
+}
+
+body.dark-mode .cta-buttons .btn:hover {
+    background: #e6c300;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #007bff;
+    color: white;
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover, 
+nav ul li a.active {
+    color: #ffdd57;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s;
+}
+
+#theme-toggle:hover {
+    color: #ffdd57;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.cta-buttons {
+    margin-top: 20px;
+}
+
+.cta-buttons .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 5px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.cta-buttons .btn:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Features Section */
+.features {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features ul li {
+    font-size: 1.1em;
+    margin: 8px 0;
+}
+
+/* Search Bar */
+#search {
+    width: 90%;
+    max-width: 400px;
+    padding: 12px;
+    margin: 10px auto;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Attendance Table */
+.attendance-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.attendance-table th, .attendance-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.attendance-table th {
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.attendance-table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.attendance-table tr:hover {
+    background: #ffdd57;
+    transition: 0.3s;
+}
+
+/* Editable Table Cells */
+.attendance-table td {
+    position: relative;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.attendance-table td:focus {
+    background: #ffeeba;
+    outline: none;
+}
+
+/* Attendance Status */
+.status-present { color: green; font-weight: bold; }
+.status-late { color: orange; font-weight: bold; }
+.status-absent { color: red; font-weight: bold; }
+
+/* Attendance Progress Bar */
+.progress-container {
+    width: 100%;
+    max-width: 600px;
+    background: #ddd;
+    border-radius: 10px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 20px;
+    width: 0%;
+    background: #007bff;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+
+    header, footer, #theme-toggle, #search {
+        display: none;
+    }
+
+    .attendance-table {
+        width: 100%;
+        border-collapse: collapse;
+        box-shadow: none;
+    }
+}
+
+/* Footer */
+footer {
+    background: #007bff;
+    color: white;
+    text-align: center;
+    padding: 12px 0;
+    margin-top: 20px;
+}
+
+footer .social-links a {
+    color: white;
+    margin: 0 10px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+footer .social-links a:hover {
+    color: #ffdd57;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 8px 0;
+    }
+
+    .attendance-table {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .hero h2 {
+        font-size: 1.8em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+}
